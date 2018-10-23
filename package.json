@@ -1,21 +1,34 @@
 {
   "name": "brain-games_aleksey.ilin",
-  "version": "0.0.2",
-  "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+  "version": "0.0.3",
+  "description": "console mini-games",
+  "keywords": [
+    "brain",
+    "games",
+    "brain-games"
+  ],
+  "homepage": "https://github.com/aleksey-ilin/project-lvl1-s364",
+  "bugs": {
+    "url": "https://github.com/aleksey-ilin/project-lvl1-s364/issues",
+    "email" : "IlinAlekseyS@gmail.com"
   },
+  "author": "Aleksey Ilin",
+  "license": "ISC",
   "files": [
     "dist"
   ],
-  "description": "",
-  "main": "index.js",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aleksey-ilin/project-lvl1-s364"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "readline-sync": "^1.4.9"
   },
