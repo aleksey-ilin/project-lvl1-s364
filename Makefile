@@ -6,3 +6,6 @@ start:
 
 publish:
 	npm publish
+
+init:
+	npx eslint .
