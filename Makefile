@@ -7,5 +7,5 @@ start:
 publish:
 	npm publish
 
-init:
+lint:
 	npx eslint .
