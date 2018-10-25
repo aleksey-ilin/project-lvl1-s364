@@ -1,6 +1,6 @@
 {
   "name": "brain-games_aleksey.ilin",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "console mini-games",
   "keywords": [
     "brain",
@@ -18,7 +18,8 @@
     "dist"
   ],
   "bin": {
-    "brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js",
+    "brain-even": "dist/bin/brain-even.js"
   },
   "repository": {
     "type": "git",
