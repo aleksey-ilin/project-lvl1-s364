@@ -2,4 +2,4 @@
 
 import gameEvent from '../games/game-even';
 
-console.log(gameEvent(1));
+console.log(gameEvent());

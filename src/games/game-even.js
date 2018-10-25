@@ -1,26 +1,27 @@
-import greeting from '..';
+import { maxAttempt, randomNum } from '..';
 import readlineSync from 'readline-sync';
 
-console.log(greeting());
+const isEven = number => number % 2 === 0;
 
+console.log('Welcome to the Brain Games!');
 const name = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${name}!`);
+console.log('Answer "yes" if number even otherwise answer "no".');
 
-const gameEven = (attempt) => {
-  if (attempt > 3) {
+const gameEven = (attempt = 1) => {
+  if (attempt > maxAttempt) {
     return `Congratulations, ${name}!`;
   }
-  const num = Math.round(Math.random() * 10) + 1;
-  console.log(`Question: ${num}`);
+  const question = randomNum();
+  console.log(`Question: ${question}`);
   const answer = readlineSync.question('Your answer: ');
-  const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
-  const incorrectAnswer = (num % 2 === 0 && answer !== 'yes') || (num % 2 !== 0 && answer !== 'no');
-  if (incorrectAnswer) {
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-    return `Let's try again, ${name}!`;
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  if (answer === correctAnswer) {
+    console.log('Correct!');
+    return gameEven(attempt + 1);
   }
-  console.log('Correct!');
-  return gameEven(attempt + 1);
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  return `Let's try again, ${name}!`;
 };
 
 export default gameEven;
