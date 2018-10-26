@@ -2,7 +2,9 @@ import readlineSync from 'readline-sync';
 
 export const maxAttempt = 3;
 
-export const randomNum = () => Math.floor(Math.random() * 10) + 1;
+export const minRandomNum = 1;
+export const maxRandomNum = 10;
+export const randomNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 
 export const engine = (question, correctAnswer) => {
   console.log('Welcome to the Brain Games!');
@@ -16,7 +18,7 @@ export const engine = (question, correctAnswer) => {
     }
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    if (Number(answer) === correctAnswer) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
       return iter(attempt + 1);
     }

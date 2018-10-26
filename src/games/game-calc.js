@@ -1,10 +1,12 @@
-import { engine, randomNum } from '..';
+import {
+  engine, randomNum, minRandomNum, maxRandomNum,
+} from '..';
 
 const gameCalc = () => {
   const operations = ['+', '-', '*'];
   const randomOperation = operations[Math.floor(Math.random() * operations.length)];
-  const randomNum1 = randomNum();
-  const randomNum2 = randomNum();
+  const randomNum1 = randomNum(minRandomNum, maxRandomNum);
+  const randomNum2 = randomNum(minRandomNum, maxRandomNum);
   const question = `${randomNum1} ${randomOperation} ${randomNum2}`;
   let correctAnswer = 0;
   switch (randomOperation) {
@@ -20,7 +22,7 @@ const gameCalc = () => {
     default:
       break;
   }
-  return engine(question, correctAnswer);
+  return engine(question, String(correctAnswer));
 };
 
 export default gameCalc;
