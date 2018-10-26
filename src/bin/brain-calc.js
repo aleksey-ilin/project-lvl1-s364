@@ -2,4 +2,4 @@
 
 import gameCalc from '../games/game-calc';
 
-console.log(gameCalc());
+gameCalc();
