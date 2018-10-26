@@ -5,6 +5,10 @@ Console mini-games
 ## Setup
 $ make install
 ## Demo
-brain-even
+Brain-even
 
 [![asciicast](https://asciinema.org/a/jFa4LnLDqf9hcnfjGuymDIhHK.png)](https://asciinema.org/a/jFa4LnLDqf9hcnfjGuymDIhHK)
+
+Brain-calc
+
+[![asciicast](https://asciinema.org/a/tyutJ5dzwagd4dquqeyzSEdAo.png)](https://asciinema.org/a/tyutJ5dzwagd4dquqeyzSEdAo)
