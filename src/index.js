@@ -14,17 +14,19 @@ export const engine = (question, correctAnswer) => {
   const iter = (attempt) => {
     if (attempt > maxAttempt) {
       console.log(`Congratulations, ${name}!`);
-      return undefined;
+      return;
     }
-    console.log(`Question: ${question}`);
+    const currentQuestion = question();
+    console.log(`Question: ${currentQuestion}`);
     const answer = readlineSync.question('Your answer: ');
-    if (answer === correctAnswer) {
+    const currentCorrentAnswer = correctAnswer(currentQuestion);
+    if (answer === currentCorrentAnswer) {
       console.log('Correct!');
-      return iter(attempt + 1);
+      iter(attempt + 1);
+      return;
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${currentCorrentAnswer}'.`);
     console.log(`Let's try again, ${name}!`);
-    return undefined;
   };
   return iter(1);
 };

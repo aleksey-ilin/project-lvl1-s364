@@ -5,8 +5,8 @@ import {
 const isEven = number => number % 2 === 0;
 
 const gameEven = () => {
-  const question = randomNum(minRandomNum, maxRandomNum);
-  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  const question = () => randomNum(minRandomNum, maxRandomNum);
+  const correctAnswer = num => (isEven(num) ? 'yes' : 'no');
   return engine(question, correctAnswer);
 };
 
