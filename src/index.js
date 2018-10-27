@@ -1,12 +1,8 @@
 import readlineSync from 'readline-sync';
 
-export const maxAttempt = 3;
+const maxAttempt = 3;
 
-export const minRandomNum = 1;
-export const maxRandomNum = 10;
-export const randomNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
-
-export const engine = (task, question, correctAnswer) => {
+export default (task, getData) => {
   console.log('Welcome to the Brain Games!');
   console.log(task);
   const name = readlineSync.question('May I have your name? ');
@@ -16,16 +12,15 @@ export const engine = (task, question, correctAnswer) => {
       console.log(`Congratulations, ${name}!`);
       return;
     }
-    const currentQuestion = question();
-    console.log(`Question: ${currentQuestion}`);
+    const [question, correctAnswer] = getData();
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    const currentCorrentAnswer = correctAnswer(currentQuestion);
-    if (answer === currentCorrentAnswer) {
+    if (answer === correctAnswer) {
       console.log('Correct!');
       iter(attempt + 1);
       return;
     }
-    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${currentCorrentAnswer}'.`);
+    console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
     console.log(`Let's try again, ${name}!`);
   };
   return iter(1);
