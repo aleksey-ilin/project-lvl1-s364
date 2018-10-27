@@ -6,11 +6,11 @@ export const minRandomNum = 1;
 export const maxRandomNum = 10;
 export const randomNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 
-export const engine = (question, correctAnswer) => {
+export const engine = (task, question, correctAnswer) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log('Answer "yes" if number even otherwise answer "no".');
+  console.log(task);
   const iter = (attempt) => {
     if (attempt > maxAttempt) {
       console.log(`Congratulations, ${name}!`);
