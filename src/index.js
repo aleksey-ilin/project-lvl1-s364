@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 export const maxAttempt = 3;
 
 export const minRandomNum = 1;
-export const maxRandomNum = 50;
+export const maxRandomNum = 10;
 export const randomNum = (min, max) => Math.floor(min + Math.random() * (max + 1 - min));
 
 export const engine = (task, question, correctAnswer) => {

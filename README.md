@@ -12,3 +12,7 @@ Brain-even
 Brain-calc
 
 [![asciicast](https://asciinema.org/a/tyutJ5dzwagd4dquqeyzSEdAo.png)](https://asciinema.org/a/tyutJ5dzwagd4dquqeyzSEdAo)
+
+Brain-gcd
+
+[![asciicast](https://asciinema.org/a/ySrBUgBR91z30O4AkXqteUf96.png)](https://asciinema.org/a/ySrBUgBR91z30O4AkXqteUf96)
