@@ -5,9 +5,9 @@ import {
 const isEven = number => number % 2 === 0;
 
 const gameEven = () => {
-  const question = () => randomNum(minRandomNum, maxRandomNum);
-  const correctAnswer = num => (isEven(num) ? 'yes' : 'no');
-  return engine(question, correctAnswer);
+  const getQuestion = () => randomNum(minRandomNum, maxRandomNum);
+  const getCorrectAnswer = num => (isEven(num) ? 'yes' : 'no');
+  return engine(getQuestion, getCorrectAnswer);
 };
 
 export default gameEven;

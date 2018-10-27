@@ -3,13 +3,11 @@ import {
 } from '..';
 
 const operations = ['+', '-', '*'];
+const randomOperation = () => operations[Math.floor(Math.random() * operations.length)];
 
 const gameCalc = () => {
-  const randomNum1 = () => randomNum(minRandomNum, maxRandomNum);
-  const randomNum2 = () => randomNum(minRandomNum, maxRandomNum);
-  const randomOperation = () => operations[Math.floor(Math.random() * operations.length)];
-  const question = () => `${randomNum1()} ${randomOperation()} ${randomNum2()}`;
-  const correctAnswer = (randomQuestion) => {
+  const getQuestion = () => `${randomNum(minRandomNum, maxRandomNum)} ${randomOperation()} ${randomNum(minRandomNum, maxRandomNum)}`;
+  const getCorrectAnswer = (randomQuestion) => {
     const operand1 = Number(randomQuestion.split(' ')[0]);
     const operand2 = Number(randomQuestion.split(' ')[2]);
     const operator = randomQuestion.split(' ')[1];
@@ -29,7 +27,7 @@ const gameCalc = () => {
     }
     return String(result);
   };
-  return engine(question, correctAnswer);
+  return engine(getQuestion, getCorrectAnswer);
 };
 
 export default gameCalc;
