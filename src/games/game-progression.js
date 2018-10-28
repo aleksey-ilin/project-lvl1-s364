@@ -19,10 +19,11 @@ const getProgression = (arr) => {
 };
 
 const getCorrectAnswer = (progression) => {
-  if (progression[0] === '..') {
+  const index = progression.indexOf('..');
+  if (index === 0) {
     return String(progression[1] - step);
   }
-  return getCorrectAnswer(progression.slice(1));
+  return String(progression[0] + index * step);
 };
 
 const getData = () => {
