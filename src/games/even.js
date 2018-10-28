@@ -1,5 +1,5 @@
 import engine from '..';
-import randomNum from '../utils';
+import { randomNum } from '../utils';
 
 const minRandomNum = 1;
 const maxRandomNum = 50;

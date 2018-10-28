@@ -1,5 +1,5 @@
 import engine from '..';
-import randomNum from '../utils';
+import { randomNum } from '../utils';
 
 const minRandomNum = 1;
 const maxRandomNum = 10;
@@ -17,15 +17,13 @@ const getNod = (num1, num2) => {
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-const getCorrectAnswer = (question) => {
-  const randomNum1 = Number(question.split(' ')[0]);
-  const randomNum2 = Number(question.split(' ')[1]);
-  return String(getNod(randomNum1, randomNum2));
-};
+const getCorrectAnswer = (num1, num2) => String(getNod(num1, num2));
 
 const getData = () => {
-  const question = `${randomNum(minRandomNum, maxRandomNum)} ${randomNum(minRandomNum, maxRandomNum)}`;
-  const correctAnswer = getCorrectAnswer(question);
+  const randomNum1 = randomNum(minRandomNum, maxRandomNum);
+  const randomNum2 = randomNum(minRandomNum, maxRandomNum);
+  const question = `${randomNum1} ${randomNum2}`;
+  const correctAnswer = getCorrectAnswer(randomNum1, randomNum2);
   return [question, correctAnswer];
 };
 
