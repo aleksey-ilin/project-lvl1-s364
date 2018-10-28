@@ -36,6 +36,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-const gameCalc = () => engine(task, getData);
-
-export default gameCalc;
+export default () => engine(task, getData);

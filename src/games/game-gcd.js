@@ -29,6 +29,4 @@ const getData = () => {
   return [question, correctAnswer];
 };
 
-const gameEven = () => engine(task, getData);
-
-export default gameEven;
+export default () => engine(task, getData);
