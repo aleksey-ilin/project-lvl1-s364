@@ -20,10 +20,10 @@ const task = 'Find the greatest common divisor of given numbers.';
 const getCorrectAnswer = (num1, num2) => String(getNod(num1, num2));
 
 const getData = () => {
-  const randomNum1 = randomNum(minRandomNum, maxRandomNum);
-  const randomNum2 = randomNum(minRandomNum, maxRandomNum);
-  const question = `${randomNum1} ${randomNum2}`;
-  const correctAnswer = getCorrectAnswer(randomNum1, randomNum2);
+  const num1 = randomNum(minRandomNum, maxRandomNum);
+  const num2 = randomNum(minRandomNum, maxRandomNum);
+  const question = `${num1} ${num2}`;
+  const correctAnswer = getCorrectAnswer(num1, num2);
   return [question, correctAnswer];
 };
 

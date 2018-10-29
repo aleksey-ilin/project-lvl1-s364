@@ -17,22 +17,16 @@ const getProgression = (startingNum, step, length, index) => {
   return iter([startingNum]);
 };
 
-const getCorrectAnswer = (progression, step) => {
-  const index = progression.indexOf('..');
-  if (index === 0) {
-    return String(progression[1] - step);
-  }
-  return String(progression[0] + index * step);
-};
+const getCorrectAnswer = (startingNum, step, index) => String(startingNum + index * step);
 
 const length = 10;
 
 const getData = () => {
-  const randomStartingNum = randomNum(minRandomNum, maxRandomNum);
-  const randomStep = randomNum(minRandomNum, maxRandomNum);
-  const randomIndex = randomNum(1, length);
-  const question = getProgression(randomStartingNum, randomStep, length, randomIndex);
-  const correctAnswer = getCorrectAnswer(question, randomStep);
+  const startingNum = randomNum(minRandomNum, maxRandomNum);
+  const step = randomNum(minRandomNum, maxRandomNum);
+  const index = randomNum(1, length);
+  const question = getProgression(startingNum, step, length, index);
+  const correctAnswer = getCorrectAnswer(startingNum, step, index);
   return [question, correctAnswer];
 };
 

@@ -1,9 +1,17 @@
 # Brain-games
-Console mini-games
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/cbeff90d7610b34dda6e/maintainability)](https://codeclimate.com/github/aleksey-ilin/project-lvl1-s364/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/cbeff90d7610b34dda6e/test_coverage)](https://codeclimate.com/github/aleksey-ilin/project-lvl1-s364/test_coverage) [![Build Status](https://travis-ci.com/aleksey-ilin/project-lvl1-s364.svg?branch=master)](https://travis-ci.com/aleksey-ilin/project-lvl1-s364)
+## Description
+This is CLI mini math games. Set consist of 5 games:
+1. brain-even
+2. brain-calc
+3. brain-gcd
+4. brain-progression
+5. brain-prime
 ## Setup
-$ make install
+`$ make install`
+`$ sudo npm install -g brain-games_aleksey.ilin`
+## Game's rules
+Every game has 3 rounds. If you give right answer on any offered question it lets you go to the next round otherwise game over, which reports message with correct answer.
 ## Demo
 Brain-even
 
