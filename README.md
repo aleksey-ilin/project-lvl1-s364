@@ -13,22 +13,22 @@ This is CLI mini math games. Set consist of 5 games:
 ## Game's rules
 Every game has 3 rounds. If you give right answer on any offered question it lets you go to the next round otherwise game over, which reports message with correct answer.
 ## Demo
-Brain-even
+brain-even
 
 [![asciicast](https://asciinema.org/a/jFa4LnLDqf9hcnfjGuymDIhHK.png)](https://asciinema.org/a/jFa4LnLDqf9hcnfjGuymDIhHK)
 
-Brain-calc
+brain-calc
 
 [![asciicast](https://asciinema.org/a/tyutJ5dzwagd4dquqeyzSEdAo.png)](https://asciinema.org/a/tyutJ5dzwagd4dquqeyzSEdAo)
 
-Brain-gcd
+brain-gcd
 
 [![asciicast](https://asciinema.org/a/ySrBUgBR91z30O4AkXqteUf96.png)](https://asciinema.org/a/ySrBUgBR91z30O4AkXqteUf96)
 
-Brain-progression
+brain-progression
 
 [![asciicast](https://asciinema.org/a/qE2rknnKmmSOGLjxhQIEU7kGF.png)](https://asciinema.org/a/qE2rknnKmmSOGLjxhQIEU7kGF)
 
-Brain-prime
+brain-prime
 
 [![asciicast](https://asciinema.org/a/tigjlnRNKt4GH7o2GVNFUAdn1.png)](https://asciinema.org/a/tigjlnRNKt4GH7o2GVNFUAdn1)
